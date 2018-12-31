@@ -588,7 +588,7 @@ function my_sortable_distributors_column( $columns ) {
 
 function my_acf_google_map_api( $api ){
 	
-	$api['key'] = 'AIzaSyBawvbiEZukKCRz186ZkbPBKjzZ96ua8iY';
+	$api['key'] = 'enter Google Maps API Key';
 	
 	return $api;
 	
@@ -596,12 +596,7 @@ function my_acf_google_map_api( $api ){
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 
-function my_acf_init() {
-	
-	acf_update_setting('google_api_key', 'AIzaSyBawvbiEZukKCRz186ZkbPBKjzZ96ua8iY');
-}
 
-//add_action('acf/init', 'my_acf_init');
 
 
 
@@ -634,16 +629,16 @@ function category_and_tag_archives( $wp_query ) {
     $selection2 = $form->getValue('iphorm_3_2');
     switch ($selection2) {	
 		case 'NexTech® "R" Series Valves':
-            $url = 'http://www.valv.com/products/trunnion-ball-valves/trunnion-nextech-r/';
+            $url = '/products/trunnion-ball-valves/trunnion-nextech-r/';
             break;
         case 'Nextech® "E" Series Valves':
-            $url = 'http://www.valv.com/products/trunnion-ball-valves/trunnion-nextech-e/';
+            $url = '/products/trunnion-ball-valves/trunnion-nextech-e/';
             break;
         case 'TrunTech® Valves':
-            $url = 'http://www.valv.com/products/trunnion-ball-valves/truntech/';
+            $url = '/products/trunnion-ball-valves/truntech/';
             break;
 		case 'PulseJet Low Emission Valves':
-            $url = 'http://www.valv.com/products/low-emission-valves/';
+            $url = '/products/low-emission-valves/';
             break;
 			  }   
    return $url;
@@ -651,19 +646,19 @@ function category_and_tag_archives( $wp_query ) {
     $selection = $form->getValue('iphorm_3_3');
     switch ($selection) {
         case 'V1-1: 1/4″-4″, 900-4500#':
-            $url = 'http://www.valv.com/products/metal-seated-ball-valves/v1-1/';
+            $url = '/products/metal-seated-ball-valves/v1-1/';
             break;
         case 'V1-1 Light-weight Compact Solution':
-            $url = 'http://www.valv.com/products/metal-seated-ball-valves/v1-1-compact/';
+            $url = '/products/metal-seated-ball-valves/v1-1-compact/';
             break;
         case 'V1-2: 1/2″-36″, 150-600#':
-            $url = 'http://www.valv.com/products/metal-seated-ball-valves/v1-2/';
+            $url = '/products/metal-seated-ball-valves/v1-2/';
             break;
 		case 'V1-3: 1/2″-2″, 150-600#':
-            $url = 'http://www.valv.com/products/metal-seated-ball-valves/v1-3/';
+            $url = '/products/metal-seated-ball-valves/v1-3/';
             break;
 		case 'V1-4: 4″-36″, 900-4500#':
-            $url = 'http://www.valv.com/products/metal-seated-ball-valves/v1-4/';
+            $url = '/products/metal-seated-ball-valves/v1-4/';
             break;
 			  }   
  return $url;
